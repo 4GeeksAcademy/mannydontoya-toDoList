@@ -18,7 +18,8 @@ function TaskList() {
   const handleDelete = (indexToBeDeleted) => {   
     setTasks(tasks.filter(  (_, index ) =>  index != indexToBeDeleted )) // [56, 34, 43, 53] => [56] => [56]
   }
-  return <div>
+  return <div className="container">
+    <h1>To Do List </h1>
     <input type="text" value={newTask} onChange={handleChange} onKeyDown={handleKeyDown}/>
     {/* task.length ? is asking a question if tasks.length is true or false, 0 is false anything > 0 is true */}
     <p>{tasks.length ? `${tasks.length} item(s) left`:'No tasks, add a task'}</p> 
